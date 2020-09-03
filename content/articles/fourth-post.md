@@ -1,8 +1,18 @@
 ---
 title: fourth-post
-description: Cillum quis non anim do magna quis dolor consequat eu. Ea est sint Lorem commodo et tempor. 
+description: Cillum quis non anim do magna quis dolor consequat eu. Ea est sint Lorem commodo et tempor.
 img: https://source.unsplash.com/random/1248x860/?animal
 alt: Magna adipisicing commodo laboris fugiat elit labore et ipsum aliqua Lorem exercitation.
+
+tags: [
+  {
+    name: "tags1"
+  },
+  {
+    name: "tags2"
+  }
+]
+
 ---
 Non est elit elit aliqua excepteur sint cupidatat magna anim sint consequat. Veniam id aute incididunt enim laboris dolor. Elit Lorem minim quis exercitation officia ex excepteur deserunt esse cupidatat nostrud. Velit tempor enim voluptate tempor culpa ipsum. Anim culpa eu esse proident est aliqua aliquip aute sint non excepteur elit.
 

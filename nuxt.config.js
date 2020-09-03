@@ -12,6 +12,17 @@ export default {
       }
     ]
   },
+  css: [
+    '~/assets/scss/nuxt-content.scss'
+  ],
+  content: {
+    nestedProperties: ['tags.name'],
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-material-dark.css'
+      }
+    }
+  },
   modules: [
     '@nuxt/content',
     '@nuxtjs/tailwindcss'

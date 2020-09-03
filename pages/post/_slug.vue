@@ -8,10 +8,7 @@
     </div>
     <div class="flex flex-col lg:flex-row lg:mx-auto xs:px-4">
       <div class="lg:flex lg:flex-col">
-        <div class="flex flex-row justify-end my-2 px-2">
-          <p v-if="article.createdAt === article.updatedAt" class="text-sm"> <span class="font-bold">Publicado:</span> {{formatDate(article.createdAt)}}</p>
-          <p v-else class="text-sm"> <span class="font-bold">Última actualización:</span> {{formatDate(article.updatedAt)}}</p>
-        </div>
+        <date class="flex flex-row justify-end my-2 px-2" :article="article"/>
         <nav class="flex flex-col lg:flex-row self-center p-2 border border-solid boder-gray-300 rounded justify-center content-center lg:mt-5">
           <ul>
             <li v-for="link of article.toc" :key="link.id" class="mt-2">
@@ -21,7 +18,17 @@
             </li>
           </ul>
        </nav>
+      <div class="flex flex-row flex-wrap justify-center lg:self-center lg:w-1/3">
+        <div v-for="tag of article.tags" :key="tag.id" 
+        class="inline-block rounded-full ml-2 mt-4 px-3 py-1
+        bg-red-500 hover:bg-red-300 text-white
+        " >
+          <nuxt-link :to="{name:'tags-tag', params:{tag: tag.name}}">
+          <span class="font-hairline">#</span>{{tag.name}}
+          </nuxt-link>
+        </div>
       </div>
+    </div>
     <div class="lg:container lg:flex lg:flex-col">
     <nuxt-content :document="article"/>
     <prev-next :prev="prev" :next="next"/>
@@ -33,7 +40,7 @@
 <script>
 export default {
   layout: 'post',
-
+  
  async asyncData({$content, params}) {
    const article = await $content('articles', params.slug)
           .fetch()
@@ -52,30 +59,14 @@ export default {
         content: this.article.description
         }]
     }
-  },
- methods: {
-   formatDate(date){
-     const options = {year:'numeric',month:'long',day:'numeric'}
-     return new Date(date).toLocaleDateString('es', options)
-   },
- }
+  }
 }
 </script>
 
 <style lang="scss">
 
-.nuxt-content {
-  @apply  my-4 px-4;
-  h2 {
-    @apply text-2xl font-bold
-  }
-  h3 {
-    @apply text-xl font-bold
-  }
-  p {
-    @apply my-6 ml-4
-    }
-}
+
+
 
 
 </style>

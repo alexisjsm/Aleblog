@@ -1,9 +1,9 @@
 <template>
-<div>
+<div class="flex flex-col h-screen">
   <navbar/>
-  <div class="flex flex-row justify-center container mx-auto lg:w-1/2">
+  <div class="flex flex-1 justify-center ">
     <nuxt/>
   </div>
-    <footer-component/>
+  <FooterComponent class=""/>
 </div>
 </template>

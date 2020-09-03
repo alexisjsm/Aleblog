@@ -3,6 +3,14 @@ title: First Post
 description: primer post
 img: https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1027&q=80
 alt: image
+tags: [
+  {
+    name: "content"
+  },
+  {
+    name: "text"
+  }
+]
 ---
 
 Aute commodo dolore ex amet laboris do reprehenderit adipisicing. Sit velit non quis aliqua fugiat cillum nulla laborum consectetur esse nostrud eu excepteur amet. Irure reprehenderit laborum non sit laboris cupidatat mollit ea est pariatur occaecat eu. Mollit sunt est officia fugiat minim velit eiusmod sunt ex occaecat fugiat eu cillum sunt.

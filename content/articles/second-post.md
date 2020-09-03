@@ -1,8 +1,17 @@
 ---
 title: This a second post
-description: Cillum quis non anim do magna quis dolor consequat eu. Ea est sint Lorem commodo et tempor. 
+description: Cillum quis non anim do magna quis dolor consequat eu. Ea est sint Lorem commodo et tempor.
 img: https://images.unsplash.com/photo-1500479694472-551d1fb6258d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
 alt: fox
+tags: [
+  {
+    name: "tags1"
+  },
+  {
+    name: "tags2"
+  }
+]
+
 ---
 Non est elit elit aliqua excepteur sint cupidatat magna anim sint consequat. Veniam id aute incididunt enim laboris dolor. Elit Lorem minim quis exercitation officia ex excepteur deserunt esse cupidatat nostrud. Velit tempor enim voluptate tempor culpa ipsum. Anim culpa eu esse proident est aliqua aliquip aute sint non excepteur elit.
 

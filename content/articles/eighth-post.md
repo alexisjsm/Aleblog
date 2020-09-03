@@ -1,9 +1,11 @@
 ---
 title: eighth post
-description: Cillum quis non anim do magna quis dolor consequat eu. Ea est sint Lorem commodo et tempor. 
+description: Cillum quis non anim do magna quis dolor consequat eu. Ea est sint Lorem commodo et tempor.
 img: https://source.unsplash.com/random/1248x860/?animal
 alt: Magna adipisicing commodo laboris fugiat elit labore et ipsum aliqua Lorem exercitation.
+tags: [{ "name": "tags1"}, { "name": "tags2" }, { "name": "python" }, { "name": "json" },  { "name": "javascript"}]
 ---
+
 Non est elit elit aliqua excepteur sint cupidatat magna anim sint consequat. Veniam id aute incididunt enim laboris dolor. Elit Lorem minim quis exercitation officia ex excepteur deserunt esse cupidatat nostrud. Velit tempor enim voluptate tempor culpa ipsum. Anim culpa eu esse proident est aliqua aliquip aute sint non excepteur elit.
 
 ## Non ea dolore esse in dolor eiusmod
@@ -19,3 +21,42 @@ Occaecat consectetur cupidatat ullamco laborum eu excepteur quis velit exercitat
 Eu minim quis non consequat ullamco. Irure culpa eiusmod eu sint excepteur laborum pariatur qui minim. Duis laboris ipsum ea labore exercitation sit. Nulla magna elit exercitation tempor ea nulla sunt amet fugiat eiusmod cillum. Officia do ut nulla esse.
 
 Incididunt mollit pariatur aute voluptate Lorem deserunt. Ea veniam sint nostrud pariatur amet cupidatat velit exercitation do. Magna elit enim et qui irure Lorem nostrud deserunt adipisicing quis anim Lorem deserunt. Veniam incididunt in ullamco officia exercitation sunt Lorem amet laboris dolor. Ullamco anim eu minim anim quis irure elit consectetur tempor mollit.
+
+## javascript
+
+```javascript
+let a = 3;
+let b = 2;
+
+function suma(a, b) {
+  return a + b;
+}
+
+let c = suma(a, b);
+
+// print 5
+console.log(c);
+```
+
+## json
+
+```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+
+## python
+
+```python
+
+a = 2
+b = 3
+
+def suma(a,b):
+  return a+b
+print(suma(a,b))
+
+```

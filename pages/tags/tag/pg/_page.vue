@@ -5,7 +5,7 @@
   <nuxt-child/>    
   </div>
   <articles :articles="articles" />
-  <pagination :name="`index`" :pageName="`pg-page`" :prev="prev" :next="next" />
+  <pagination :name="`tags-tag`" :pageName="`tags-tag-pg-page`" :prev="prev" :next="next"  :tag="$route.params.tag"/>
   </div>
 </template>
 
@@ -20,6 +20,9 @@ export default {
     const articles = await $content('articles')
       .only(['title', 'description','tags','img','alt','slug','createdAt','updatedAt'])
       .sortBy('createdAt', 'desc')
+      .where({'tags.name':{
+       $containsAny: [params.tag ]
+       }})
       .skip(postsByPages*(pgNumber-1))
       .limit(postsByPages)
       .fetch()
@@ -27,6 +30,9 @@ export default {
     const nextpostsByPages = await $content('articles')
       .only(['title', 'description', 'img', 'alt', 'slug', 'createdAt','updatedAt'])
       .sortBy('createdAt', 'desc')
+      .where({'tags.name':{
+       $containsAny: [params.tag ]
+       }})
       .skip(postsByPages*(pgNumber))
       .limit(postsByPages)
       .fetch()

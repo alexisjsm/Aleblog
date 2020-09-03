@@ -1,0 +1,15 @@
+<template>
+  <nuxt-child/>
+</template>
+
+<script>
+export default {
+
+  layout: 'index'
+
+}
+</script>
+
+<style>
+
+</style>

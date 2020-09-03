@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-between mt-8">
         <nuxt-link v-if="prev === 1"
-          to="/"
+          :to="{name: name, params: {tag: tag}}"
           class="text-teal-600 font-bold hover:underline text-sm"
         >
             <svg class="h-6 w-6 float-left ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -11,7 +11,7 @@
       </nuxt-link>
     
         <nuxt-link v-else-if="prev"
-          :to="{name: 'pg-page', params:{page: prev}}"
+          :to="{name: pageName, params:{page: prev, tag: tag}}"
           class="text-teal-600 font-bold hover:underline text-sm"
         >
             <svg class="h-6 w-6 float-left ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -21,7 +21,7 @@
       </nuxt-link>
       <span v-else>&nbsp;</span>
       <nuxt-link v-if="next"
-      :to="{name: 'pg-page', params:{page: next}}"
+      :to="{name: pageName, params:{page: next, tag: tag}}"
       class="text-teal-600 font-bold hover:underline text-sm"
       >
         <svg class="h-6 w-6 float-right mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -42,6 +42,18 @@ props: {
   },
   next: {
     type: Number,
+    default: () => null
+  },
+  pageName: {
+    type: String,
+    required: true
+  },
+  name: {
+    type: String,
+    required: true
+  },
+  tag: {
+    type: String,
     default: () => null
   }
 }
