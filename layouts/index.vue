@@ -4,6 +4,6 @@
   <div class="flex flex-1 justify-center ">
     <nuxt/>
   </div>
-  <FooterComponent class=""/>
+  <footer-component/>
 </div>
 </template>
