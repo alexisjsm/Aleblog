@@ -2,7 +2,7 @@
 <header class="bg-teal-500 sm:flex sm:justify-between sm:py-2 sm:px-4  shadow-inner">
   <div class="flex justify-between py-2 px-4 items-center ">
     <div>
-      <p class="text-white font-bold text-3xl"> Ale Blog </p>
+      <p class="text-white font-bold text-3xl">{{title}} </p>
     </div>
     <div class="sm:hidden">
       <button @click="isActive = !isActive" type="button" class="text-white focus:text-gray-800">
@@ -21,12 +21,12 @@
 
           <span> Home </span>          
         </nuxt-link>
-        <nuxt-link to="/About" class=" block sm:block-inline text-white font-semibold hover:bg-teal-400 px-4  py-2 mt-1 rounded sm:mt-0 ">
+        <a :href="about" target="__blank" class=" block sm:block-inline text-white font-semibold hover:bg-teal-400 px-4  py-2 mt-1 rounded sm:mt-0 ">
           <svg class="h-6 w-6 sm:float-right float-left mr-2 sm:ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
           </svg>
           About
-        </nuxt-link>
+        </a>
     </div>
 </header>
 </template>
@@ -35,7 +35,9 @@
 export default {
 
   data: () => ({
-    isActive: false
+    isActive: false,
+    title: process.env.PAGETITLE,
+    about: process.env.PAGEABOUT
   })
 
 }
