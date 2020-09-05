@@ -1,15 +1,30 @@
+require('dotenv').config()
+
 export default {
 
+  mode: 'universal',
+  target: 'static',
+
   head: {
-    title: process.env.npm_package_name || '',
+    titleTemplate: (titleChunk) => titleChunk ? `${titleChunk} - ${process.env.PAGETITLE}` : `${process.env.PAGETITLE}`,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
+        vmid: 'title',
+        property: 'og:title',
+        name: 'title',
+        content: process.env.PAGETITLE,
+        template: chunck => `${chunck} - ${process.env.PAGETITLE}`
+      },
+      {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: process.env.DESCRIPTION || ''
       }
+    ],
+    link: [
+      { rel: 'favicon', href: 'static/favicon.ico' }
     ]
   },
   css: [
@@ -26,6 +41,9 @@ export default {
   modules: [
     '@nuxt/content',
     '@nuxtjs/tailwindcss'
+  ],
+  buildModules: [
+    '@nuxtjs/dotenv'
   ],
   components: true
 }

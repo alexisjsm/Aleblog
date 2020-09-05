@@ -13,10 +13,10 @@
           <date class="py-2 px-3" :article="article"/>
       </div>
       </nuxt-link>
-      <div class="flex flex-row flex-wrap py-2 px-3">
+      <div class="flex flex-row flex-wrap py-3 px-2">
         <div v-for="tag of article.tags" :key="tag.id" 
-          class="inline-block rounded-full ml-2 mt-4 px-3 py-1
-          bg-red-500 hover:bg-red-300 text-white" >
+          class="inline-block rounded-full ml-2 mt-1 px-2 py-1
+          bg-red-500 hover:bg-red-300 text-white">
             <nuxt-link :to="{name:'tags-tag', params:{tag: tag.name}}">
             <span class="italic">#</span>{{tag.name}}
             </nuxt-link>

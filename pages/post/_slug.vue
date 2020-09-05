@@ -54,10 +54,13 @@ export default {
  head(){
     return {
       title: this.article.title,
-      meta: [{
-        name: this.article.title,
-        content: this.article.description
-        }]
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.article.description
+        }
+        ]
     }
   }
 }
