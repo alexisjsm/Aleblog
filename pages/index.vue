@@ -1,10 +1,15 @@
 <template>
-<div>
+<div v-if="articles.length">
     <div class="text-3xl font-bold  divide-y divide-gray-500">
       <h2> Last Posts</h2>
     </div>
     <articles :articles="articles"/>
     <pagination :name="`index`" :pageName="`pg-page`" :prev="prev" :next="next" />
+</div>
+<div v-else class="flex items-center h-full">
+  <div class="text-xl lg:text-3xl font-bold">
+    <p>Aún no hay articulos publicados</p>
+  </div>
 </div>
 </template>
 

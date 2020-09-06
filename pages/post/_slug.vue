@@ -56,9 +56,21 @@ export default {
       title: this.article.title,
       meta: [
         {
+        hid: 'title',
+        property: 'og:title',
+        name: 'title',
+        content:` ${this.article.title} - ${process.env.PAGETITLE}`,
+        },
+        {
           hid: 'description',
           name: 'description',
           content: this.article.description
+        },
+        {
+          hid: 'image',
+          property: 'og:image',
+          name: 'image',
+          content: `${this.article.img}`
         }
         ]
     }

@@ -11,11 +11,10 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        vmid: 'title',
+        hid: 'title',
         property: 'og:title',
         name: 'title',
-        content: process.env.PAGETITLE,
-        template: chunck => `${chunck} - ${process.env.PAGETITLE}`
+        content: process.env.PAGETITLE
       },
       {
         hid: 'description',
@@ -24,7 +23,7 @@ export default {
       }
     ],
     link: [
-      { rel: 'favicon', href: 'static/favicon.ico' }
+      { rel: 'favicon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   css: [
