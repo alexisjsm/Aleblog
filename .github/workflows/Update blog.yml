@@ -1,0 +1,32 @@
+name: Update blog
+on:
+    push:
+        branches:
+            - master
+jobs:
+    build:
+        runs-on: 'ubuntu-latest'
+        steps:
+            - uses: "actions/checkout@v2"
+            - name: Copy repository contents via scp
+              uses: appleboy/scp-action@master
+              env:
+                HOST: ${{ secrets.HOST }}
+                USERNAME: ${{ secrets.USERNAME }}
+                PORT: ${{ secrets.PORT }}
+                KEY: ${{ secrets.SSHKEYS }}
+              with:
+                  source: "."
+                  target: "/var/www/AleBlog"
+            - name: Setup Node.js environment
+              uses: actions/setup-node@v1.4.3
+              with:
+                    node-version: 14
+            - run: |
+                npm i ci
+                npm run generate
+                cp .env.example .env
+                echo "PAGETITLE = AleBlog\nPAGEABOUT = http://alewebdev.com\nDESCRIPTION = Pagina de desarrollo web\n"  > .env
+                pm2 restart
+              env: 
+                CI: true
