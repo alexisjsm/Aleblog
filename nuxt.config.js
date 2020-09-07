@@ -20,6 +20,12 @@ export default {
         hid: 'description',
         name: 'description',
         content: process.env.DESCRIPTION || ''
+      },
+      {
+        hid: 'image',
+        name: 'image',
+        property: 'og:image',
+        content: '/favicon.png'
       }
     ],
     link: [
