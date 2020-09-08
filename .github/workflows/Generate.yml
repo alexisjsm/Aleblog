@@ -26,6 +26,8 @@ jobs:
                   PORT: ${{ secrets.PORT }}
                   KEY: ${{ secrets.SSHKEYS }}
                   script: |
+                    pwd 
+                    cd "/var/www/AleBlog"
                     npm i ci
                     npm run generate
                     pm2 restart Aleblog

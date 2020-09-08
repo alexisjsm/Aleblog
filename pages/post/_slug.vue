@@ -40,7 +40,8 @@
 <script>
 export default {
   layout: 'post',
-  
+  transition: 'slide',
+
  async asyncData({$content, params}) {
    const article = await $content('articles', params.slug)
           .fetch()
@@ -78,8 +79,35 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
+.slide{
+  &-enter-active, &-enter-leave-active {
+    animation: slide-coming .5s ease-in;
+  }
+}
+
+@keyframes slide-coming {
+  0%{
+    transform: translateX(-500px);
+    transform: skewX(-18deg);
+    opacity: 0;
+  }
+  36%{
+    transform: translateX(-166px);
+    transform: skewX(-9deg);
+  }
+  54%{
+    transform: translateX(-18px);
+    opacity: 1;
+  }
+  78%{
+    transform: translateX(0px);
+  }
+  100%{
+    transform: skewX(0px);
+  }
+}
 
 
 

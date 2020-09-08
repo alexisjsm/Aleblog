@@ -12,14 +12,6 @@
   
 }
 
-.page{
-  &-enter-active, &-enter-leave-active{
-    transition: opacity 0.5s;
-}
-  &-enter, &-enter-leave-to{
-    opacity: 0;
-  }
-}
 .fade{
   &-enter-active, &-enter-leave-active{
     transition: opacity 0.5s;
@@ -28,3 +20,4 @@
     opacity: 0;
   }
 }
+

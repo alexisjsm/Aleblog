@@ -5,6 +5,15 @@ export default {
   mode: 'universal',
   target: 'static',
 
+  layoutTransition:{
+    name: 'fade',
+    mode: 'out-in'
+  },
+  pageTransition:{
+    name: 'fade',
+    mode: 'out-in'
+  },
+
   head: {
     titleTemplate: (titleChunk) => titleChunk ? `${titleChunk} - ${process.env.TITLE}` : `${process.env.TITLE}`,
     meta: [
