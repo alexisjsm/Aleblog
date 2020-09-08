@@ -33,7 +33,7 @@ export default {
     ]
   },
   css: [
-    '~/assets/scss/nuxt-content.scss'
+    '~/assets/scss/main.scss'
   ],
   content: {
     nestedProperties: ['tags.name'],
