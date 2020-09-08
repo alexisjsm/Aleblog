@@ -29,4 +29,4 @@ jobs:
                     cd /var/www/AleBlog
                     npm i ci
                     npm run generate
-                    pm2 restart
+                    pm2 restart AleBlog
