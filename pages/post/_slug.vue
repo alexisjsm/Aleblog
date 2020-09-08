@@ -9,10 +9,10 @@
     <div class="flex flex-col lg:flex-row lg:mx-auto xs:px-4">
       <div class="lg:flex lg:flex-col">
         <date class="flex flex-row justify-end my-2 px-2" :article="article"/>
-        <nav class="flex flex-col lg:flex-row self-center p-2 border border-solid boder-gray-300 rounded justify-center content-center lg:mt-5">
+        <nav v-if="article.toc.length" class="block lg:inline-block self-center p-2 border border-gray-500 rounded justify-center content-center lg:mt-5 lg:max-w-md">
           <ul>
             <li v-for="link of article.toc" :key="link.id" class="mt-2">
-              <nuxt-link :to="`#${link.id}`" :class="{'py-2 text-teal-700  hover:underline font-bold': link.depth===2, 'ml-2 pb-2 py-2 text-teal-600 hover:underline font-semibold': link.depth ===3}">
+              <nuxt-link :to="`#${link.id}`" :class="{'py-2 text-blue-800 hover:underline font-semibold': link.depth===2, 'ml-2 pb-2 py-2 text-blue-500 hover:underline font-medium': link.depth ===3}">
                 {{link.text}}
               </nuxt-link>
             </li>
@@ -29,7 +29,7 @@
         </div>
       </div>
     </div>
-    <div class="lg:container lg:flex lg:flex-col">
+    <div class="lg:flex lg:flex-col lg:container lg:mx-auto">
     <nuxt-content :document="article"/>
     <prev-next :prev="prev" :next="next"/>
     </div>

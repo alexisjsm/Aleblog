@@ -1,4 +1,4 @@
-name: Update blog
+name: Generate blog
 on:
     push:
         branches:
@@ -18,15 +18,14 @@ jobs:
               with:
                   source: "."
                   target: "/var/www/AleBlog"
-            - name: Setup Node.js environment
-              uses: actions/setup-node@v1.4.3
+            - name: generate blog
+              uses: appleboy/ssh-action@master
               with:
-                    node-version: 14
-            - run: |
-                npm i ci
-                npm run generate
-                cp .env.example .env
-                echo "PAGETITLE = AleBlog\nPAGEABOUT = http://alewebdev.com\nDESCRIPTION = Pagina de desarrollo web\n"  > .env
-                pm2 restart
-              env: 
-                CI: true
+                  HOST: ${{ secrets.HOST }}
+                  USERNAME: ${{ secrets.USERNAME }}
+                  PORT: ${{ secrets.PORT }}
+                  KEY: ${{ secrets.SSHKEYS }}
+                  script: |
+                    npm i ci
+                    npm run generate
+                    pm2 restart

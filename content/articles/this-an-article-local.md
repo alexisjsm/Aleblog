@@ -3,7 +3,7 @@ title: This an article local
 description: this's an example text description
 img: /images/computer.jpg
 alt: Ordenador encima de una mesa alado una taza con café.
-tags: [{name: "Java", slug: "java" }, { name: "Programación", slug: "programacion" }, { name: "POO" ,slug: "poo" }]   
+tags: [{name: "Java"}, { name: "Programacion"}, { name: "POO"}]   
 ---
 Veniam nostrud ipsum commodo id. Do cillum velit laboris nostrud eiusmod pariatur qui dolore mollit. Velit magna qui voluptate quis officia. Lorem do non cupidatat eiusmod enim cupidatat consequat ut ea irure nulla amet.
 

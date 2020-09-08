@@ -6,7 +6,7 @@ export default {
   target: 'static',
 
   head: {
-    titleTemplate: (titleChunk) => titleChunk ? `${titleChunk} - ${process.env.PAGETITLE}` : `${process.env.PAGETITLE}`,
+    titleTemplate: (titleChunk) => titleChunk ? `${titleChunk} - ${process.env.TITLE}` : `${process.env.TITLE}`,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -14,7 +14,7 @@ export default {
         hid: 'title',
         property: 'og:title',
         name: 'title',
-        content: process.env.PAGETITLE
+        content: process.env.TITLE
       },
       {
         hid: 'description',
@@ -48,7 +48,6 @@ export default {
     '@nuxtjs/tailwindcss'
   ],
   buildModules: [
-    '@nuxtjs/dotenv'
-  ],
+    '@nuxtjs/dotenv' ],
   components: true
 }
