@@ -1,7 +1,7 @@
 ---
 title: fourth-post
 description: Cillum quis non anim do magna quis dolor consequat eu. Ea est sint Lorem commodo et tempor.
-img: https://source.unsplash.com/random/1248x860/?animal
+img: /images/elephant.jpg
 alt: Magna adipisicing commodo laboris fugiat elit labore et ipsum aliqua Lorem exercitation.
 
 tags: [

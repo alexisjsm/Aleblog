@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <slot name="Date" :article="article">
-          <p v-if="article.createdAt === article.updatedAt" class="text-sm"> <span class="font-bold">Publicado:</span> {{formatDate(article.createdAt)}}</p>
-          <p v-else class="text-sm"> <span class="font-bold">Última actualización:</span> {{formatDate(article.updatedAt)}}</p>
-    </slot>
+<div :article="article">
+  <p v-if="article.createdAt === article.updatedAt" class="text-sm"> <span class="font-bold">Publicado:</span> {{formatDate(article.createdAt)}}</p>
+  <p v-else class="text-sm"> <span class="font-bold">Última actualización:</span> {{formatDate(article.updatedAt)}}</p>
 </div>
 </template>
 

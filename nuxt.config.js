@@ -5,16 +5,20 @@ export default {
   mode: 'universal',
   target: 'static',
 
-  layoutTransition:{
+  layoutTransition: {
     name: 'fade',
     mode: 'out-in'
   },
-  pageTransition:{
+  pageTransition: {
     name: 'fade',
     mode: 'out-in'
   },
 
   head: {
+    htmlAttrs: {
+      lang: 'en',
+      amp: true
+    },
     titleTemplate: (titleChunk) => titleChunk ? `${titleChunk} - ${process.env.TITLE}` : `${process.env.TITLE}`,
     meta: [
       { charset: 'utf-8' },
@@ -45,6 +49,7 @@ export default {
     '~/assets/scss/main.scss'
   ],
   content: {
+    liveEdit: false,
     nestedProperties: ['tags.name'],
     markdown: {
       prism: {
@@ -57,6 +62,26 @@ export default {
     '@nuxtjs/tailwindcss'
   ],
   buildModules: [
-    '@nuxtjs/dotenv' ],
+    '@nuxtjs/dotenv',
+    '@aceforth/nuxt-optimized-images'
+  ],
+  optimizedImages: {
+    inlineImageLimit: 1000,
+    optimizeImages: true,
+    optimizeImagesInDev: false,
+    defaultImageLoader: 'img-loader',
+    mozjpeg: {
+      quality: 75
+    },
+    optipng: false,
+    pngquant: {
+      speed: 7,
+      quality: [0.65, 0.8]
+    },
+    webp: {
+
+      quality: 80
+    }
+  },
   components: true
 }

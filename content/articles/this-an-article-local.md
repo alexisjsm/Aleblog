@@ -17,4 +17,4 @@ Sint Lorem sint quis voluptate officia sunt elit dolor occaecat et. In enim offi
 
 Laborum dolore tempor anim elit. Fugiat nostrud exercitation voluptate qui ipsum id anim cupidatat reprehenderit veniam. Consequat sunt minim adipisicing incididunt cillum consequat ex tempor aliquip fugiat aute tempor reprehenderit. Laboris cillum do eu exercitation excepteur sunt nostrud Lorem.
 
-![image](/images/computer.jpg)
+<image-component :images="'/images/dog.jpg'" class="w-1/2" :alt="'is a dog'"></image-component>

@@ -1,7 +1,7 @@
 ---
 title: This a second post
 description: Cillum quis non anim do magna quis dolor consequat eu. Ea est sint Lorem commodo et tempor.
-img: https://images.unsplash.com/photo-1500479694472-551d1fb6258d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
+img: /images/fox.jpg
 alt: fox
 tags: [
   {

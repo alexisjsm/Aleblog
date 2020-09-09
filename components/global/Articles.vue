@@ -4,9 +4,10 @@
   class="max-w-sm rounded overflow-hidden shadow-md xs:mt-4 xs:mx-2">
     <div class="divide-y divide-gray-500 ">
       <nuxt-link :to="{name: 'post-slug', params: {slug: article.slug}}">
-        <img :src="article.img" :alt="article.alt" 
-        class="object-cover w-full"
-        >
+        <picture class="object-cover w-full">
+          <source :srcset="require(`~/assets${article.img}?webp`)" type="image/webp">
+          <img :src="require(`~/assets${article.img}`)" loading="lazy" :alt="article.alt">
+        </picture>
         <div class="divide-y divide-gray-500  py-2 px-4">
           <h2 class="text-center text-lg  font-bold"> {{article.title}} </h2>
           <p class="text-sm font-light px-2 py-4" > {{article.description}}</p>
@@ -16,7 +17,7 @@
       <div class="flex flex-row flex-wrap py-3 px-2">
         <div v-for="tag of article.tags" :key="tag.id" 
           class="inline-block rounded-full ml-2 mt-1 px-2 py-1
-          bg-red-500 hover:bg-red-300 text-white">
+          bg-red-800  text-gray-200 hover:text-gray-900 hover:bg-red-300">
             <nuxt-link :to="{name:'tags-tag', params:{tag: tag.name}}">
             <span class="italic">#</span>{{tag.name}}
             </nuxt-link>
