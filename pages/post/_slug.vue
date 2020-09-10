@@ -71,7 +71,7 @@ export default {
           hid: 'image',
           property: 'og:image',
           name: 'image',
-          content: `${this.article.img}`
+          content: `${require(`~/assets${this.article.img}`)}`
         }
         ]
     }
