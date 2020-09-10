@@ -66,10 +66,14 @@ export default {
     '@aceforth/nuxt-optimized-images'
   ],
   optimizedImages: {
-    inlineImageLimit: 1000,
+    inlineImageLimit: -1,
     optimizeImages: true,
     optimizeImagesInDev: false,
-    defaultImageLoader: 'img-loader',
+    defaultImageLoader: 'responsive-loader',
+    responsive: {
+      adapter: require('responsive-loader/sharp'),
+      quality: 70
+    },
     mozjpeg: {
       quality: 75
     },
@@ -79,8 +83,7 @@ export default {
       quality: [0.65, 0.8]
     },
     webp: {
-
-      quality: 80
+      quality: 70
     }
   },
   components: true

@@ -1,10 +1,7 @@
 <template>
   <article class="flex  flex-col lg:h-screen w-full">
     <div class="relative lg:h-84 sm:h-64 xs:-48 post-left shadow-sm">
-      <picture>
-        <source :srcset="require(`~/assets${article.img}?webp`)" type="image/webp">
-      <img :src="require(`~/assets${article.img}`)" :alt="article.alt" loading="lazy" class="object-cover  object-center w-full h-full">
-      </picture>
+      <dynamic-images :image="article.img" :alt="article.alt" :imageClass="'h-full w-full object-cover'" />
       <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">
         <h1 class="font-bold xs:text-3xl sm:text-4xl dm:text-5xl xl:text-6xl text-center">{{article.title}}</h1>
       </div>

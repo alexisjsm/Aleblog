@@ -4,10 +4,7 @@
   class="max-w-sm rounded overflow-hidden shadow-md xs:mt-4 xs:mx-2">
     <div class="divide-y divide-gray-500 ">
       <nuxt-link :to="{name: 'post-slug', params: {slug: article.slug}}">
-        <picture class="object-cover w-full">
-          <source :srcset="require(`~/assets${article.img}?webp`)" type="image/webp">
-          <img :src="require(`~/assets${article.img}`)" loading="lazy" :alt="article.alt">
-        </picture>
+        <dynamic-images :image="article.img" :alt="article.alt" :imageClass="'object-cover h-full w-full'"/>
         <div class="divide-y divide-gray-500  py-2 px-4">
           <h2 class="text-center text-lg  font-bold"> {{article.title}} </h2>
           <p class="text-sm font-light px-2 py-4" > {{article.description}}</p>
