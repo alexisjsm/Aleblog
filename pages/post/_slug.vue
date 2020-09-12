@@ -102,7 +102,7 @@ export default {
         {
           hid: 'twitter:image',
           property: 'twitter:image',
-          content: `${require(`~/assets${this.article.img}?sizes[]=1024`)}`,
+          content: `${require(`~/assets${this.article.img}?sizes[]=1024`)}`
         },
         {
           hid: 'twitter:image:alt',
