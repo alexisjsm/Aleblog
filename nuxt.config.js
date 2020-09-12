@@ -2,7 +2,7 @@ require('dotenv').config()
 
 export default {
 
-  ssr: true,
+  ssr: false,
   target: 'static',
   components: true,
 
