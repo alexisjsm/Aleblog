@@ -1,7 +1,7 @@
 <template>
   <div>
-        <div class="text-3xl font-bold  divide-y divide-gray-500 mt-2">
-      <h2> Artículos sobre: {{$route.params.tag}}</h2>
+        <div class="text-3xl font-bold  divide-y divide-gray-500">
+      <h2>Tags: {{$route.params.tag}}</h2>
     </div>
     <articles :articles="articles"/>
     <pagination :name="`tags-tag`" :pageName="`tags-tag-pg-page`" :prev="prev" :next="next" :tag="$route.params.tag"/>

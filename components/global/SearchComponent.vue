@@ -4,7 +4,7 @@
      <svg class="w-6 h-6 float-left mr-2 sm:float-right sm:ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
     </svg>
-     Buscar
+     Search
    </button>
   <transition name="fade-in" appear>
     <div :class="isActive ? 'block' : 'hidden'" class="z-40 fixed left-0 top-0  lg:w-screen lg:h-screen w-full h-full p-16 overflow-auto bg-gray-800 bg-opacity-50 lg:p-64" @click="isActive = false">
