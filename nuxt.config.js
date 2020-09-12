@@ -58,6 +58,21 @@ export default {
         hid: 'og:image',
         property: 'og:image',
         content: process.env.NODE_ENV === 'production' ? `${process.env.HOSTNAME}/logo.png` : '/logo.png'
+      },
+      {
+        hid: 'twitter:title',
+        property: 'twitter:title',
+        content: `${process.env.TITLE}`
+      },
+      {
+        hid: 'twitter:description',
+        property: 'twitter:description',
+        content: `${process.env.DESCRIPTION}`
+      },
+      {
+        hid: 'twitter:image',
+        property: 'twitter:image',
+        content: process.env.NODE_ENV === 'production' ? `${process.env.HOSTNAME}/logo.png` : '/logo.png'
       }
     ],
     link: [
