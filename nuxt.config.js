@@ -26,7 +26,6 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'title',
-        property: 'og:title',
         name: 'title',
         content: process.env.TITLE || ''
       },
@@ -36,10 +35,29 @@ export default {
         content: process.env.DESCRIPTION || ''
       },
       {
-        hid: 'image',
-        name: 'image',
+        hid: 'og:title',
+        property: 'og:title',
+        content: process.env.TITLE || ''
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: process.env.DESCRIPTION || ''
+      },
+      {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'blog'
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: process.env.NODE_ENV === 'production' ? `${process.env.HOSTNAME}` : ''
+      },
+      {
+        hid: 'og:image',
         property: 'og:image',
-        content: '/favicon.png'
+        content: process.env.NODE_ENV === 'production' ? `${process.env.HOSTNAME}/logo.png` : '/logo.png'
       }
     ],
     link: [

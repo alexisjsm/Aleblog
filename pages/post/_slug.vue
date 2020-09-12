@@ -59,22 +59,56 @@ export default {
     return {
       title: this.article.title,
       meta: [
-        {
+      {
         hid: 'title',
-        property: 'og:title',
         name: 'title',
-        content:` ${this.article.title} - ${process.env.PAGETITLE}`,
+         content:` ${this.article.title} - ${process.env.TITLE}`,
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: this.article.description
+      },
+        {
+        hid: 'og:title',
+        property: 'og:title',
+        content:` ${this.article.title} - ${process.env.TITLE}`,
         },
         {
-          hid: 'description',
-          name: 'description',
+          hid: 'og:description',
+          property: 'og:description',
           content: this.article.description
         },
         {
-          hid: 'image',
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'article'
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: process.env.NODE_ENV === 'production' ? `${process.env.HOSTNAME}/post/${this.article.slug}` : `${this.article.slug}` 
+        },
+        {
+          hid: 'og:image',
           property: 'og:image',
-          name: 'image',
-          content: `${require(`~/assets${this.article.img}`)}`
+          content: `${require(`~/assets${this.article.img}?sizes[]=1024`)}`
+        },
+        {
+          hid: 'twitter:title',
+          property: 'twitter:title',
+          content:`${this.article.title} - ${process.env.TITLE}`
+        },
+        {
+          hid: 'twitter:image',
+          property: 'twitter:image',
+          content: `${require(`~/assets${this.article.img}?sizes[]=1024`)}`,
+        },
+        {
+          hid: 'twitter:image:alt',
+          property: 'twitter:image:alt',
+          name: 'image:alt',
+          content: `${this.article.alt}`
         }
         ]
     }
