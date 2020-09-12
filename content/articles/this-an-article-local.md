@@ -16,6 +16,5 @@ Est pariatur dolore nulla officia consectetur pariatur est labore velit et venia
 Sint Lorem sint quis voluptate officia sunt elit dolor occaecat et. In enim officia veniam nostrud exercitation ea occaecat esse enim est veniam. Occaecat sunt ullamco culpa elit proident. Cupidatat et id excepteur ut nulla nisi excepteur amet voluptate ut.
 
 Laborum dolore tempor anim elit. Fugiat nostrud exercitation voluptate qui ipsum id anim cupidatat reprehenderit veniam. Consequat sunt minim adipisicing incididunt cillum consequat ex tempor aliquip fugiat aute tempor reprehenderit. Laboris cillum do eu exercitation excepteur sunt nostrud Lorem.
-<div class="flex content-center w-1/2">
-<dynamic-images :image="'/images/dog.jpg'" :alt="'is a dog'"></dynamic-images>
-<div/>
+
+<dynamic-images :image="'/images/dog.jpg'" :alt="'is a dog'" :image-class="'w-1/2'"></dynamic-images>

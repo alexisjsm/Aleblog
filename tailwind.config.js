@@ -10,6 +10,11 @@ module.exports = {
     extend: {
       height: {
         84: '22rem'
+      },
+      colors: {
+        black: {
+          100: '#14151A'
+        }
       }
     },
     inset: {

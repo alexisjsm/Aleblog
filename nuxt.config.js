@@ -2,8 +2,9 @@ require('dotenv').config()
 
 export default {
 
-  mode: 'universal',
+  ssr: true,
   target: 'static',
+  components: true,
 
   layoutTransition: {
     name: 'fade',
@@ -27,7 +28,7 @@ export default {
         hid: 'title',
         property: 'og:title',
         name: 'title',
-        content: process.env.TITLE
+        content: process.env.TITLE || ''
       },
       {
         hid: 'description',
@@ -45,9 +46,7 @@ export default {
       { rel: 'favicon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  css: [
-    '~/assets/scss/main.scss'
-  ],
+  css: ['~/assets/scss/main.scss'],
   content: {
     liveEdit: false,
     nestedProperties: ['tags.name'],
@@ -86,5 +85,4 @@ export default {
       quality: 70
     }
   },
-  components: true
 }

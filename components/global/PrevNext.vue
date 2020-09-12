@@ -1,5 +1,5 @@
 <template>
-  <div class="flex  justify-between items-center my-3">
+  <div class="flex  justify-between items-center my-3  lg:mx-5">
     <nuxt-link v-if="prev" 
     :to="{name: 'post-slug', params: {slug: prev.slug}}"
     class="text-teal-700 font-bold hover:underline sm:text-lg"

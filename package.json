@@ -13,8 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@nuxt/content": "^1.7.0",
-    "nuxt": "^2.14.4",
+    "@nuxt/content": "^1.8.1",
+    "nuxt": "^2.14.5",
     "prism-themes": "^1.4.0"
   },
   "devDependencies": {
@@ -22,15 +22,15 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/tailwindcss": "^3.0.2",
     "dotenv": "^8.2.0",
-    "eslint": "^7.7.0",
+    "eslint": "^7.8.1",
     "eslint-plugin-vue": "^6.2.2",
     "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-pngquant": "^9.0.0",
+    "imagemin-pngquant": "^9.0.1",
     "imagemin-svgo": "^8.0.0",
     "lqip-loader": "^2.2.0",
     "node-sass": "^4.14.1",
     "responsive-loader": "^2.1.1",
-    "sass-loader": "^10.0.1",
+    "sass-loader": "^10.0.2",
     "sharp": "^0.26.0",
     "webp-loader": "^0.6.0"
   }
