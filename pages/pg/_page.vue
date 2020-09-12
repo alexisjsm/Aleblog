@@ -1,7 +1,7 @@
 <template>
 <div class="flex flex-col">
-  <div class="text-3xl text-left font-bold  divide-y divide-gray-500">
-    <h2> more Posts</h2>
+  <div class="text-3xl font-bold  divide-y divide-gray-500 mt-2">
+    <h2> Más artículos: </h2>
   <nuxt-child/>    
   </div>
   <articles :articles="articles" />
