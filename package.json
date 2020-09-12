@@ -10,7 +10,7 @@
     "start": "nuxt start"
   },
   "keywords": [],
-  "author": "",
+  "author": "@alexisjsm",
   "license": "ISC",
   "dependencies": {
     "@nuxt/content": "^1.8.1",

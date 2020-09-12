@@ -85,6 +85,26 @@ export default {
           content: 'article'
         },
         {
+          hid: 'article:author',
+          property: 'article:author',
+          content: this.article.author || ''
+        },
+        {
+          hid: 'article:author',
+          property: 'article:author',
+          content: this.article.author || ''
+        },
+        {
+          hid: 'article:published_time',
+          property: 'article:published_time',
+          content: this.article.createdAt
+        },
+        {
+          hid: 'article:modified_time ',
+          property: 'article:modified_time ',
+          content: this.article.updatedAt
+        },
+        {
           hid: 'og:url',
           property: 'og:url',
           content: process.env.NODE_ENV === 'production' ? `${process.env.HOSTNAME}/post/${this.article.slug}` : `${this.article.slug}` 

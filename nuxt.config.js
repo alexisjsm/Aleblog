@@ -45,11 +45,6 @@ export default {
         content: process.env.DESCRIPTION || ''
       },
       {
-        hid: 'og:type',
-        property: 'og:type',
-        content: 'blog'
-      },
-      {
         hid: 'og:url',
         property: 'og:url',
         content: process.env.NODE_ENV === 'production' ? `${process.env.HOSTNAME}` : ''
