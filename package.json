@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt generate",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
     "start": "nuxt start"
   },
   "keywords": [],
@@ -19,7 +20,6 @@
     "@nuxt/content": "^1.8.1",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/tailwindcss": "^3.0.2",
-    "@nuxtjs/vercel-builder": "^0.17.5",
     "dotenv": "^8.2.0",
     "eslint": "^7.8.1",
     "eslint-plugin-vue": "^6.2.2",
