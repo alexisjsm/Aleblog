@@ -8,7 +8,7 @@
           <source  :srcset="require(`~/assets${image}?resize&sizes[]=680`)" type="image/jpeg" media="(max-width: 767px )">
           <source  :srcset="require(`~/assets${image}?resize&sizes[]=860`)" type="image/jpeg" media="(max-width: 1024px )">
           <source  :srcset="require(`~/assets${image}?resize&sizes[]=1024`)" type="image/jpeg" media="(max-width: 1248px)">
-          <img     :src="require(`~/assets${image}`)" loading="lazy" :alt="alt" :class="imageClass">
+          <img     :srcset="require(`~/assets${image}`)" loading="lazy" :alt="alt" :class="imageClass">
         </picture>
 </template>
 

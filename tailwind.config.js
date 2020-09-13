@@ -8,6 +8,10 @@ module.exports = {
       xl: '1280px'
     },
     extend: {
+      listStyleType: {
+        circle: 'circle',
+        alpha: 'lower-alpha'
+      },
       height: {
         84: '22rem'
       },
@@ -24,5 +28,19 @@ module.exports = {
       32: '32px',
       '1/2': '50%'
     }
+  },
+  plugins: [
+    require('@tailwindcss/typography')
+  ],
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    content: [
+      'content/**/*.md',
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'plugins/**/*.js',
+      'nuxt.config.js'
+    ]
   }
 }
