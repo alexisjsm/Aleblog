@@ -7,15 +7,15 @@ alt: Ordenador encima de una mesa de madera.
 tags: [{name: "Bienvenidos"},{name: "Blog"}, {name: "Nuxtjs"}, {name: "Desarrollo"}]
 ---
 
-Es domingo por tarde, y con una taza de café a lado y unas galletitas para acompañar, por fin he acabado mi blog personal 🥳🥳 o ~~eso creo~~. Sé que no me he presentado, si bien, estas aquí seguramente me conozca, me llamo __Alexis Jesús__ y soy Desarrollador web o mejor dicho _Development Web_, destaco JavaScript como lenguaje principal aunque, a veces, hago cosas con PHP o Python, pero ya dejo de hablar de mí, así que os comento sobre este proyecto ~~lo estás deseando~~.
+Es domingo por tarde, y con una taza de café a lado y unas galletitas para acompañar, por fin he acabado mi blog personal 🥳🥳 ~~o eso creo~~. Sé que no me he presentado, si bien, si estás aquí me conozcas o no, me presento, me llamo __Alexis Jesús__, soy Desarrollador web o mejor dicho _Development Web_, destaco JavaScript como lenguaje principal aunque, a veces, hago cosas con PHP o Python, pero ya dejo de hablar de mí, así que os comento sobre este proyecto.
 
 ## Sobre el proyecto
 
-El blog está escrito en Javascript ~~_of course_~~ con el framework [Nuxtjs](https://nuxtjs.org), es un framework de [Vuejs](https://vuejs.org/) que facilita la configuración de Vue con estructura ya organizada, enrutamiento automático, modo de renderizado, entre otras muchas, además cuenta con unos cuantos módulos como por ejemplo [@nuxtjs/content](https://content.nuxtjs.org/), ayuda escribir contenido de forma rápida con archivos markdown, csv, xml.
+El blog está escrito en Javascript con [Nuxtjs](https://nuxtjs.org), es un framework de [Vuejs](https://vuejs.org/) que facilita la configuración de Vue con estructura ya organizada, enrutamiento automático, modo de renderizado, entre otras muchas, además cuenta con unos cuantos módulos como por ejemplo [@nuxtjs/content](https://content.nuxtjs.org/), ayuda escribir contenido de forma rápida con archivos markdown, csv, xml.
 
-Otro framework que me gustaría destacar, en este caso de CSS, es [tailwinds](https://tailwindcss.com/), tenía ganas de probarlo ~~ya porque esta de moda~~ y no quería derrochar esta oportunidad, en mi opinión me ha parecido sutil y personalizable a la hora de maquetar la web.
+Otro framework que me gustaría destacar, en este caso de CSS, es [tailwinds](https://tailwindcss.com/), tenía ganas de probarlo, ya porque esta de moda y no quería derrochar esta oportunidad; en mi opinión me ha parecido sutil y personalizable a la hora de maquetar la web.
 
-El proyecto se encuentra subido en mi [Github](https://github.com/alexisjsm/Aleblog) ~~give me a star 🌟~~ .Os dejo con una lista de los módulos.
+El proyecto se encuentra subido en mi [Github](https://github.com/alexisjsm/Aleblog) ~~_give me a star 🌟_~~ .Os dejo con una lista de los módulos.
 
 ### Módulos usados
 
