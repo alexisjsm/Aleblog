@@ -14,11 +14,18 @@ export default {
     name: 'fade',
     mode: 'out-in'
   },
+  robots: [{
+    UserAgent: 'Googlebot',
+    Disallow: '/user'
+  },
+  {
+    UserAgent: '*',
+    Disallow: '/admin'
+  }],
 
   head: {
     htmlAttrs: {
-      lang: 'en',
-      amp: true
+      lang: 'es'
     },
     titleTemplate: (titleChunk) => titleChunk ? `${titleChunk} - ${process.env.TITLE}` : `${process.env.TITLE}`,
     meta: [
@@ -86,7 +93,8 @@ export default {
   },
   modules: [
     '@nuxt/content',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/robots'
   ],
   buildModules: [
     '@nuxtjs/dotenv',
@@ -112,5 +120,5 @@ export default {
     webp: {
       quality: 70
     }
-  },
+  }
 }

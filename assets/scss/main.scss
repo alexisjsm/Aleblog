@@ -1,3 +1,16 @@
+.nuxt-content {
+  @apply mx-4 my-3;
+  p{
+    @apply text-black-100;
+  }
+  ul, ol{
+    @apply text-black-100;
+  }
+  a{
+    @apply  text-blue-500 underline;
+    
+  }
+}
 
 
 .fade{
