@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="flex flex-col sm:flex-row sm:justify-center xs:px-4">
-      <div>
+      <div class=" flex flex-col">
           <date class="flex flex-row xs:justify-end my-2 px-2" :article="article"/>
           <nav v-if="article.toc.length" class="block lg:inline-block self-center p-2 border border-gray-500 rounded lg:mt-5 w-full">
             <ul>
@@ -19,7 +19,7 @@
               </li>
             </ul>
         </nav>
-        <div class="flex flex-row flex-wrap justify-center lg:self-center">
+        <div class="flex flex-row flex-wrap justify-center lg:self-center lg:w-1/3">
           <div v-for="tag of article.tags" :key="tag.id" 
           class="inline-block rounded-full ml-2 mt-4 px-3 py-1
           bg-red-800  text-gray-200 hover:text-gray-900 hover:bg-red-300
