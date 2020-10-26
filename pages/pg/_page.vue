@@ -4,7 +4,7 @@
     <h2> Más artículos: </h2>
   <nuxt-child/>    
   </div>
-  <articles :articles="articles" />
+  <article-cards :articles="articles" />
   <pagination :name="`index`" :pageName="`pg-page`" :prev="prev" :next="next" />
   </div>
 </template>

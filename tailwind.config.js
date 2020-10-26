@@ -1,5 +1,10 @@
 module.exports = {
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true
+  },
   theme: {
+
     screens: {
       xs: '320px',
       sm: '640px',
@@ -16,6 +21,8 @@ module.exports = {
         84: '22rem'
       },
       colors: {
+        primary: '#2C7A7B',
+        secondary: '#32908f',
         black: {
           100: '#14151A'
         }

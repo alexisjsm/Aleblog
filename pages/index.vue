@@ -3,7 +3,7 @@
     <div class="text-3xl font-bold  divide-y divide-gray-500 mt-2">
       <h2> Artículos más recientes: </h2>
     </div>
-    <articles :articles="articles"/>
+    <article-cards :articles="articles"/>
     <pagination :name="`index`" :pageName="`pg-page`" :prev="prev" :next="next" />
 </div>
 <div v-else class="flex items-center h-full">

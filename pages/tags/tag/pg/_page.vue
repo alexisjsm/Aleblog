@@ -4,7 +4,7 @@
     <h2>más artículos sobre: {{$route.params.tag}}</h2>
   <nuxt-child/>    
   </div>
-  <articles :articles="articles" />
+  <article-cards :articles="articles" />
   <pagination :name="`tags-tag`" :pageName="`tags-tag-pg-page`" :prev="prev" :next="next"  :tag="$route.params.tag"/>
   </div>
 </template>
