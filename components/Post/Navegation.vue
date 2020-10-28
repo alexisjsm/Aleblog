@@ -1,18 +1,19 @@
 <template>
   <nav
     v-if="toc.length"
-    class="block lg:inline-block self-center p-2 border border-gray-500 rounded lg:mt-5 w-full"
+    class="p-2"
   >
     <ul>
-      <li v-for="link of toc" :key="link.id" class="mt-2 lg:text-lg">
+      <li v-for="link of toc" :key="link.id" class="lg:text-lg">
         <nuxt-link
           :to="`#${link.id}`"
           :class="{
-            'py-2 text-blue-900  hover:underline font-semibold':
+            'text-blue-900  font-semibold':
               link.depth === 2,
-            'ml-2 pb-2 py-2  text-blue-800 hover:underline font-medium':
+            'text-blue-800 font-light space-x-10 ml-3':
               link.depth === 3
-          }"
+            }"
+          class="block bg-gray-200 rounded p-2 my-2 hover:bg-gray-100"
         >
           {{ link.text }}
         </nuxt-link>

@@ -1,7 +1,7 @@
 <template>
-<div :article="article">
-  <p v-if="article.createdAt === article.updatedAt" class="text-sm"> <span class="font-bold">Publicado:</span> {{formatDate(article.createdAt)}}</p>
-  <p v-else class="text-sm"> <span class="font-bold">Última actualización:</span> {{formatDate(article.updatedAt)}}</p>
+<div class="flex flex-row mt-2">
+  <p v-if="createdAt === updatedAt" class="font-base"> <span class="font-bold">Publicado:</span> {{formatDate(createdAt)}}</p>
+  <p v-else class="font-base"> <span class="font-bold">Última actualización:</span> {{formatDate(updatedAt)}}</p>
 </div>
 </template>
 
@@ -9,8 +9,12 @@
 export default {
 
   props: {
-    article: {
-      type: Object,
+     createdAt:{
+      type: String,
+      required: true
+    },
+    updatedAt:{
+      type: String,
       required: true
     }
   },

@@ -16,10 +16,10 @@
         </div>
       </div>
       <div class="flex flex-col sm:flex-row sm:justify-center xs:px-4">
-        <div class="flex flex-col">
+        <div class="flex flex-col lg:w-1/4">
           <date
-            class="flex flex-row xs:justify-end my-2 px-2"
-            :article="post"
+            :createdAt="post.createdAt"
+            :updatedAt="post.updatedAt"
           />
           <navegation :toc="post.toc"/>
           <div
@@ -28,7 +28,7 @@
             <tags-component :tags="post.tags" />
           </div>
         </div>
-        <nuxt-content class="prose lg:prose-xl" :document="post" />
+        <nuxt-content class="prose sm:prose-lg sm:w-9/12 lg:prose-xl" :document="post" />
       </div>
     </article>
     <prev-next :prev="prev" :next="next" />

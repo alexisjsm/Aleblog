@@ -15,7 +15,7 @@
           <div class="divide-y divide-gray-500 py-2 px-4">
             <h2 class="text-center text-2xl font-bold">{{ article.title }}</h2>
             <p class="text-sm font-sans px-2 py-4">{{ article.description }}</p>
-            <date class="py-2 px-3" :article="article" />
+            <date class="py-2 px-3" :createdAt="article.createdAt" :updatedAt="article.updatedAt" />
           </div>
         </nuxt-link>
         <div class="flex flex-row flex-wrap py-3 px-2">
