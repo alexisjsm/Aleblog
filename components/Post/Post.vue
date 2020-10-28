@@ -22,11 +22,9 @@
             :updatedAt="post.updatedAt"
           />
           <navegation :toc="post.toc"/>
-          <div
-            class="flex flex-row flex-wrap justify-center lg:self-center lg:w-1/3"
-          >
-            <tags-component :tags="post.tags" />
-          </div>
+         
+          <tags-component :tags="post.tags" />
+          
         </div>
         <nuxt-content class="prose sm:prose-lg sm:w-9/12 lg:prose-xl" :document="post" />
       </div>

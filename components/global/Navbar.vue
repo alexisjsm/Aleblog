@@ -41,7 +41,7 @@
     <div :class="isActive ? 'block' : 'hidden'" class="pb-4 pt-2 px-1 sm:flex">
       <nuxt-link
         to="/"
-        class="block sm:block-inline text-white font-semibold hover:bg-teal-500 hover:text-black-100 px-4 py-2 rounded sm:mt-0"
+        class="block sm:block-inline text-gray-200 font-semibold hover:bg-gray-200 hover:text-primary px-4 py-2 rounded sm:mt-0"
       >
         <svg
           class="h-6 w-6 sm:float-right sm:ml-2 float-left mr-2"
@@ -62,7 +62,7 @@
       <a
         :href="about"
         target="__blank"
-        class="block sm:block-inline text-white font-semibold hover:bg-teal-500 hover:text-black-100 px-4 py-2 mt-1 rounded sm:mt-0"
+        class="block sm:block-inline text-gray-200 font-semibold hover:bg-gray-200 hover:text-primary px-4 py-2 mt-1 rounded sm:mt-0"
       >
         <svg
           class="h-6 w-6 sm:float-right float-left mr-2 sm:ml-2"

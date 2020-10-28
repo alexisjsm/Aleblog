@@ -1,3 +1,4 @@
+
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
@@ -22,7 +23,6 @@ module.exports = {
       },
       colors: {
         primary: '#2C7A7B',
-        secondary: '#32908f',
         black: {
           100: '#14151A'
         }
