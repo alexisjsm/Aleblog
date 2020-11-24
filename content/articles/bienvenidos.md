@@ -3,8 +3,14 @@ title: Bienvenidos
 description: Es domingo por tarde, y con una taza de café a lado y unas galletitas para acompañar, por fin he acabado mi blog personal 🥳🥳 ...
 img: /images/computer.jpg
 author: Alexis Jesús
+createdAt: 2020-09-14
+updatedAt: 2020-09-14
 alt: Ordenador encima de una mesa de madera.
-tags: [{name: "Bienvenidos"},{name: "Blog"}, {name: "Nuxtjs"}, {name: "Desarrollo"}]
+tags:
+    - Bienvenidos
+    - Blog
+    - Nuxtjs
+    - Desarrollo
 ---
 
 Es domingo por tarde, y con una taza de café a lado y unas galletitas para acompañar, por fin he acabado mi blog personal 🥳🥳 ~~o eso creo~~. Sé que no me he presentado, si bien, si estás aquí me conozcas o no, me presento, me llamo __Alexis Jesús__, soy Desarrollador web o mejor dicho _Development Web_, destaco JavaScript como lenguaje principal aunque, a veces, hago cosas con PHP o Python, pero ya dejo de hablar de mí, así que os comento sobre este proyecto.

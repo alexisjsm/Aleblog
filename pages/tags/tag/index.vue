@@ -23,7 +23,7 @@ export default {
 
     const articles = await $content('articles')
      .only(['title', 'description','img','alt','tags','slug', 'createdAt', 'updatedAt'])
-     .where({'tags.name':{
+     .where({'tags':{
        $containsAny: [params.tag ]
        }})
       .sortBy('createdAt', 'desc')
@@ -33,7 +33,7 @@ export default {
 
     const nextpostsByPages = await $content('articles')
       .only(['title', 'description', 'img', 'alt', 'slug', 'createdAt','updatedAt'])
-      .where({'tags.name':{
+      .where({'tags':{
        $containsAny: [params.tag ]
        }})
       .sortBy('createdAt', 'desc')

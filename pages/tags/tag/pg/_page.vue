@@ -20,7 +20,7 @@ export default {
     const articles = await $content('articles')
       .only(['title', 'description','tags','img','alt','slug','createdAt','updatedAt'])
       .sortBy('createdAt', 'desc')
-      .where({'tags.name':{
+      .where({'tags':{
        $containsAny: [params.tag ]
        }})
       .skip(postsByPages*(pgNumber-1))
@@ -30,7 +30,7 @@ export default {
     const nextpostsByPages = await $content('articles')
       .only(['title', 'description', 'img', 'alt', 'slug', 'createdAt','updatedAt'])
       .sortBy('createdAt', 'desc')
-      .where({'tags.name':{
+      .where({'tags':{
        $containsAny: [params.tag ]
        }})
       .skip(postsByPages*(pgNumber))
