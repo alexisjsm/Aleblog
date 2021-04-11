@@ -14,13 +14,10 @@ export default {
     name: 'fade',
     mode: 'out-in'
   },
-  robots: [{
-    UserAgent: 'Googlebot',
-    Disallow: '/user'
-  },
+  robots: [
   {
     UserAgent: '*',
-    Disallow: '/admin'
+    Allow: '/'
   }],
 
   head: {
