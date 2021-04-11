@@ -89,8 +89,8 @@
 export default {
   data: () => ({
     isActive: false,
-    title: process.env.PAGETITLE,
-    about: process.env.PAGEABOUT
+    title: process.env.PAGE_TITLE,
+    about: process.env.PAGE_ABOUT
   })
 }
 </script>
