@@ -112,7 +112,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 h1 {
   text-shadow: 1px 1px #14151a;
 }

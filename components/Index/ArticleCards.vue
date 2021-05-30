@@ -7,11 +7,11 @@
     >
       <div class="divide-y divide-gray-500">
         <nuxt-link :to="{ name: 'post-slug', params: { slug: article.slug } }">
-          <dynamic-images
+          <!-- <dynamic-images
             :image="article.img"
             :alt="article.alt"
             :imageClass="'object-cover h-full w-full'"
-          />
+          /> -->
           <div class="divide-y divide-gray-500 py-2 px-4">
             <h2 class="text-center text-2xl font-bold">{{ article.title }}</h2>
             <p class="text-sm font-sans px-2 py-4">{{ article.description }}</p>
@@ -28,6 +28,7 @@
 
 <script>
 export default {
+	name:  'articleCards',
   props: {
     articles: {
       type: Array,

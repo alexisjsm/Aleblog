@@ -34,6 +34,7 @@
 
 <script>
 export default {
+	name: 'pagination',
 
 props: {
   prev: {

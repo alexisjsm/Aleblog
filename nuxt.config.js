@@ -4,7 +4,12 @@ export default {
 
   ssr: true,
   target: 'static',
-  components: true,
+  components: {
+		dirs: [
+			'~/components/Index',
+			'~/components/Post'
+		]
+	},
 
   layoutTransition: {
     name: 'fade',
@@ -78,7 +83,7 @@ export default {
       { rel: 'favicon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  css: ['~/assets/scss/main.scss'],
+  css: ['~assets/css/main.css'],
   content: {
     liveEdit: false,
     nestedProperties: ['tags.name'],
@@ -95,27 +100,5 @@ export default {
   ],
   buildModules: [
     '@nuxtjs/dotenv',
-    '@aceforth/nuxt-optimized-images'
   ],
-  optimizedImages: {
-    inlineImageLimit: -1,
-    optimizeImages: true,
-    optimizeImagesInDev: false,
-    defaultImageLoader: 'responsive-loader',
-    responsive: {
-      adapter: require('responsive-loader/sharp'),
-      quality: 70
-    },
-    mozjpeg: {
-      quality: 75
-    },
-    optipng: false,
-    pngquant: {
-      speed: 7,
-      quality: [0.65, 0.8]
-    },
-    webp: {
-      quality: 70
-    }
-  }
 }
