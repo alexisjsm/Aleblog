@@ -11,7 +11,7 @@
     </div>
   </transition>
   <transition name="fade-in" appear>
-    <div v-show="isActive" class=" z-50 fixed left-1/2 top-1/2  transform -translate-x-1/2 -translate-y-1/2  flex flex-col justify-center
+    <div v-show="isActive" class=" z-50 w-96 fixed left-1/2 top-1/2  transform -translate-x-1/2 -translate-y-1/2  flex flex-col justify-center
     bg-gray-400 px-4 py-2 rounded-lg mx-auto lg:w-1/3">
         <div class="flex flex-row justify-between">
           <div class="px-2 py-1  lg:text-2xl text-xl font-semibold">
@@ -67,7 +67,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 
 .fade-in{
   &-enter-active{

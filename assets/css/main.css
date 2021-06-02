@@ -1,24 +1,11 @@
-.nuxt-content {
-  @apply mx-4 my-3;
-  p{
-    @apply text-black-100;
-  }
-  ul, ol{
-    @apply text-black-100;
-  }
-  a{
-    @apply  text-blue-500 underline;
-    
-  }
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 
 
-.fade{
-  &-enter-active, &-enter-leave-active{
-    transition: opacity 0.5s;
-}
-  &-enter, &-enter-leave-to{
-    opacity: 0;
-  }
-}
 

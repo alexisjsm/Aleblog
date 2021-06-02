@@ -78,12 +78,12 @@ export default {
         {
           hid: "og:image",
           property: "og:image",
-          content:
-            process.env.NODE_ENV === "production"
-              ? `${
-                  process.env.HOSTNAME
-                }${require(`~/assets${this.article.img}?sizes[]=1024`)}`
-              : `${require(`~/assets${this.article.img}?sizes[]=1024`)}`,
+          // content:
+          //   process.env.NODE_ENV === "production"
+          //     ? `${
+          //         process.env.HOSTNAME
+          //       }${require(`~/assets${this.article.img}?sizes[]=1024`)}`
+          //     : `${require(`~/assets${this.article.img}?sizes[]=1024`)}`,
         },
         {
           hid: "twitter:title",
@@ -93,12 +93,12 @@ export default {
         {
           hid: "twitter:image",
           property: "twitter:image",
-          content:
-            process.env.NODE_ENV === "production"
-              ? `${
-                  process.env.HOSTNAME
-                }${require(`~/assets${this.article.img}?sizes[]=1024`)}`
-              : `${require(`~/assets${this.article.img}?sizes[]=1024`)}`,
+          // content:
+          //   process.env.NODE_ENV === "production"
+          //     ? `${
+          //         process.env.HOSTNAME
+          //       }${require(`~/assets${this.article.img}?sizes[]=1024`)}`
+          //     : `${require(`~/assets${this.article.img}?sizes[]=1024`)}`,
         },
         {
           hid: "twitter:image:alt",
@@ -112,7 +112,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 h1 {
   text-shadow: 1px 1px #14151a;
 }

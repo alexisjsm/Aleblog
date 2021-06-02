@@ -10,10 +10,11 @@ export default {
 			'~/components/Post'
 		]
 	},
+  css: ['~assets/css/main.css'],
 
   layoutTransition: {
     name: 'fade',
-    mode: 'out-in'
+    mode: ''
   },
   pageTransition: {
     name: 'fade',
@@ -83,7 +84,6 @@ export default {
       { rel: 'favicon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  css: ['~assets/css/main.css'],
   content: {
     liveEdit: false,
     nestedProperties: ['tags.name'],
@@ -96,9 +96,10 @@ export default {
   modules: [
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
   ],
   buildModules: [
-    '@nuxtjs/dotenv',
+		'@nuxtjs/dotenv',
+		'@nuxt/image'
   ],
 }

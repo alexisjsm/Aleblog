@@ -26,7 +26,17 @@ module.exports = {
         black: {
           100: '#14151A'
         }
-      }
+      },
+			typography: (theme) =>({
+				DEFAULT: {
+					css:  {
+						color: theme('colors.black.100'),
+						a: {
+							color: theme('colors.blue.500')
+						}
+					}
+				}
+			})
     },
     inset: {
       0: '0px',
@@ -35,6 +45,8 @@ module.exports = {
       32: '32px',
       '1/2': '50%'
     }
+	
+
   },
   plugins: [
     require('@tailwindcss/typography')

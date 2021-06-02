@@ -1,7 +1,7 @@
 <template>
-<div class="flex flex-col h-screen">
+<div class="flex flex-col xs:h-screen">
   <navbar/>
-  <div class="flex flex-1 justify-center ">
+  <div class="flex flex-auto justify-center lg:justify-between">
     <nuxt/>
   </div>
   <footer-component/>
