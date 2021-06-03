@@ -30,7 +30,7 @@ export default {
     htmlAttrs: {
       lang: 'es'
     },
-    titleTemplate: (titleChunk) => titleChunk ? `${titleChunk} - ${process.env.TITLE}` : `${process.env.TITLE}`,
+    titleTemplate: (titleChunk) => titleChunk ? `${titleChunk} - ${process.env.PAGE_TITLE}` : `${process.env.TITLE}`,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
