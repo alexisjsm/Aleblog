@@ -1,5 +1,5 @@
 <template>
-<div class="p-3" v-if="articles.length">
+<div v-if="articles.length">
     <div class="text-3xl font-bold  divide-y divide-gray-500 mt-2">
       <h2> Artículos más recientes: </h2>
     </div>

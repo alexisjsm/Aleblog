@@ -30,14 +30,14 @@ export default {
     htmlAttrs: {
       lang: 'es'
     },
-    titleTemplate: (titleChunk) => titleChunk ? `${titleChunk} - ${process.env.PAGE_TITLE}` : `${process.env.TITLE}`,
+    titleTemplate: (titleChunk) => titleChunk ? `${titleChunk} - ${process.env.PAGE_TITLE}` : `${process.env.PAGE_TITLE}`,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'title',
         name: 'title',
-        content: process.env.TITLE || ''
+        content: process.env.PAGE_TITLE || ''
       },
       {
         hid: 'description',
@@ -47,7 +47,7 @@ export default {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: process.env.TITLE || ''
+        content: process.env.PAGE_TITLE || ''
       },
       {
         hid: 'og:description',
@@ -67,7 +67,7 @@ export default {
       {
         hid: 'twitter:title',
         property: 'twitter:title',
-        content: `${process.env.TITLE}`
+        content: `${process.env.PAGE_TITLE}`
       },
       {
         hid: 'twitter:description',
