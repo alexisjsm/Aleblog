@@ -12,6 +12,15 @@ export default {
 	},
   css: ['~assets/css/main.css'],
 
+  image: {
+    screens: {
+      icon: 40,
+      avatar: 24,
+      xs: 384,
+      sm: 400,
+    }
+  },
+
   layoutTransition: {
     name: 'fade',
     mode: ''

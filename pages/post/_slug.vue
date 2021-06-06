@@ -82,8 +82,8 @@ export default {
             process.env.NODE_ENV === 'production'
               ? `${
                   process.env.HOSTNAME
-                }${this.$img(`${this.article.img}`)}`
-              : `${this.$img(`${this.article.img}`)}`
+                }${this.$img(`${this.article.img}`,  { width: 1024 })}`
+              : `${this.$img(`${this.article.img}`,  { width: 1024 })}`
         },
         {
           hid: 'twitter:title',
@@ -97,8 +97,8 @@ export default {
             process.env.NODE_ENV === 'production'
               ? `${
                   process.env.HOSTNAME
-                }${this.$img(`${this.article.img}`)}`
-              : `${this.$img(`${this.article.img}`)}`
+                }${this.$img(`${this.article.img}`, {width: 1024})}`
+              : `${this.$img(`${this.article.img}`, {width: 1024})}`
         },
         {
           hid: 'twitter:image:alt',

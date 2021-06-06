@@ -6,11 +6,11 @@
     </svg>
      Buscar
    </button>
-  <transition name="fade-in" appear>
+  <transition name="fade" appear>
     <div :class="isActive ? 'block' : 'hidden'" class="z-40 fixed left-0 top-0  lg:w-screen lg:h-screen w-full h-full p-16 overflow-auto bg-gray-800 bg-opacity-50 lg:p-64" @click="isActive = false">
     </div>
   </transition>
-  <transition name="fade-in" appear>
+  <transition name="fade" appear>
     <div v-show="isActive" class=" z-50 w-96 fixed left-1/2 top-1/2  transform -translate-x-1/2 -translate-y-1/2  flex flex-col justify-center
     bg-gray-400 px-4 py-2 rounded-lg mx-auto lg:w-1/3">
         <div class="flex flex-row justify-between">
@@ -66,25 +66,3 @@ export default {
 
 }
 </script>
-
-<style lang="postcss" scoped>
-
-.fade-in{
-  &-enter-active{
-    transition: opacity .3s ;
-}
-  &-enter{
-   opacity: 0;    
-  }
-  &-leave-active {
-    opacity: 0;
-    transition: all .3s;
-  }
-  &-leave{
-    transition: opacity .3s;
-  }
-
-}
-
-
-</style>
