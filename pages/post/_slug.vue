@@ -80,10 +80,10 @@ export default {
           property: 'og:image',
           content:
             process.env.NODE_ENV === 'production'
-              ? `${
-                  process.env.HOSTNAME
-                }${this.$img(`${this.article.img}`,  { width: 1024 })}`
-              : `${this.$img(`${this.article.img}`,  { width: 1024 })}`
+              ? `${process.env.HOSTNAME}${this.$img(`${this.article.img}`, {
+                  width: 1024
+                })}`
+              : `${this.$img(`${this.article.img}`, { width: 1024 })}`
         },
         {
           hid: 'twitter:title',
@@ -95,10 +95,10 @@ export default {
           property: 'twitter:image',
           content:
             process.env.NODE_ENV === 'production'
-              ? `${
-                  process.env.HOSTNAME
-                }${this.$img(`${this.article.img}`, {width: 1024})}`
-              : `${this.$img(`${this.article.img}`, {width: 1024})}`
+              ? `${process.env.HOSTNAME}${this.$img(`${this.article.img}`, {
+                  width: 1024
+                })}`
+              : `${this.$img(`${this.article.img}`, { width: 1024 })}`
         },
         {
           hid: 'twitter:image:alt',
@@ -111,38 +111,3 @@ export default {
   }
 }
 </script>
-
-<style lang="postcss" scoped>
-h1 {
-  text-shadow: 1px 1px #14151a;
-}
-
-.slide {
-  &-enter-active,
-  &-enter-leave-active {
-    animation: slide-coming 0.5s ease-in;
-  }
-}
-
-@keyframes slide-coming {
-  0% {
-    transform: translateX(-500px);
-    transform: skewX(-18deg);
-    opacity: 0;
-  }
-  36% {
-    transform: translateX(-166px);
-    transform: skewX(-9deg);
-  }
-  54% {
-    transform: translateX(-18px);
-    opacity: 1;
-  }
-  78% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: skewX(0px);
-  }
-}
-</style>

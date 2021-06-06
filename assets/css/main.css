@@ -9,3 +9,30 @@
 
 
 
+  .slide-enter-active,
+  .slide-enter-leave-active {
+    animation: slide-coming 0.5s ease-in;
+  }
+
+
+@keyframes slide-coming {
+  0% {
+    transform: translateX(-500px);
+    transform: skewX(-18deg);
+    opacity: 0;
+  }
+  36% {
+    transform: translateX(-166px);
+    transform: skewX(-9deg);
+  }
+  54% {
+    transform: translateX(-18px);
+    opacity: 1;
+  }
+  78% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: skewX(0px);
+  }
+}
